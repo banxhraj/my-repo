@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="headingbar">
+        <h1>Dice Wars</h1>
+        <p>Roll the dice and score points!</p>
+        <img src="question.png" onclick="switchPlayer()" alt="help">
+    </div>
+    <div class="container">
+        <div class="pannel player-1">
+            <h2>PLAYER 1</h2>
+            <div class="score">0</div>
+            <div class="current">
+                <div class="current-label">CURRENT</div>
+                <div class="current-score">0</div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="dice-6.png" class="dice" />
+            <button class="btn restart">RESTART</button>
+            <button class="btn roll">ROLL DICE</button>
+            <button class="btn hold">HOLD</button>
+        </div>
+        <div class="pannel player-2">
+            <h2>PLAYER 2</h2>
+            <div class="score">0</div>
+            <div class="current">
+                <div class="current-label">CURRENT</div>
+                <div class="current-score">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

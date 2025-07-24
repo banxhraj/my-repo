@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("samurai.png");
+  background-size: cover; /* or contain, or specific values */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center center; /* Center the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height instead of height */
+  padding-top: 60px; /* Add padding to avoid overlap with fixed header */
+}
+
+.headingbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  text-align: center;
+  color: white;
+  font-size: 1.5rem; /* Reduced font size */
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.19);
+  border-radius: 0 0 10px 10px; /* Reduced border-radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Reduced box-shadow */
+  z-index: 1000;
+}
+
+
+.headingbar > h1 {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 3rem; /* Adjusted font size */
+  margin: 0;
+}
+
+.headingbar > p {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 1rem; /* Adjusted font size */
+  margin-top: 5px;
+}
+.headingbar > img {
+  width: 25px; /* Adjusted icon size */
+  height: 25px; /* Adjusted icon size */
+  padding: 5px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 90%; /* Reduced width */
+  max-width: 1200px; /* Added max-width */
+  margin-top: 70px; /* Reduced margin-top */
+}
+
+.pannel {
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 30%; /* Adjusted width */
+  min-width: 200px; /* Added min-width */
+  margin: 0 5px;
+}
+
+.pannel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.score {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.current {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.current-label {
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+}
+
+.current-score {
+  font-size: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pannel.active {
+  border: 3px solid #ffd700;
+  box-shadow: 0 0 15px #ffd70088;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffd700;
+  transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+    margin-top: 60px;
+  }
+
+  .pannel {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .controls {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: auto 100%;
+  }
+
+  .headingbar {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .pannel h2 {
+    font-size: 1rem;
+  }
+
+  .score {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}
