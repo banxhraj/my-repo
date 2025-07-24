@@ -8,6 +8,7 @@ const btnRoll = document.querySelector('.btn.roll');
 const btnHold = document.querySelector('.btn.hold');
 const btnRestart = document.querySelector('.btn.restart');
 
+
 let scoresArr, currentScore, activePlayer, playing;
 
 // Initialize game
@@ -75,3 +76,18 @@ btnHold.addEventListener('click', function () {
 
 // Restart
 btnRestart.addEventListener('click', start);
+
+const modal = document.querySelector('.modal');
+const btnCloseModal = document.querySelector('.btn.close-modal');
+const btnHelp = document.querySelector(".help")
+function showModal() {
+    modal.classList.remove("hidden");
+    
+}
+
+function closeModal() {
+    modal.classList.add("hidden");
+}
+
+btnHelp.addEventListener("click", showModal);
+btnCloseModal.addEventListener("click", closeModal);
