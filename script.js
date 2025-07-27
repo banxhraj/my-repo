@@ -25,8 +25,7 @@ function start() {
     diceImg.style.visibility = 'visible';
     playerPanels[0].classList.add('active');
     playerPanels[1].classList.remove('active');
-    playerPanels[0].classList.remove('winner');
-    playerPanels[1].classList.remove('winner');
+   
 
 
     playerPanels[0].querySelector('h2').textContent = 'PLAYER 1';
