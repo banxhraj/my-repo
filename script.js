@@ -11,7 +11,7 @@ const btnRestart = document.querySelector('.btn.restart');
 
 let scoresArr, currentScore, activePlayer, playing;
 
-// Initialize game
+
 function start() {
     scoresArr = [0, 0];
     currentScore = 0;
