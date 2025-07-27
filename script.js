@@ -1,5 +1,3 @@
-
-
 const playerPanels = document.querySelectorAll('.pannel');
 const scores = document.querySelectorAll('.score');
 const currentScores = document.querySelectorAll('.current-score');
@@ -67,8 +65,8 @@ btnHold.addEventListener('click', function () {
     if (scoresArr[activePlayer] >= 100) {
         playing = false;
         playerPanels[activePlayer].classList.add('winner');
-        diceImg.style.visibility = 'visible';
-        
+        diceImg.style.visibility = 'hidden';
+        playerPanels[activePlayer].querySelector('h2').textContent = 'WINNER!'; // Update text
     } else {
         switchPlayer();
     }
@@ -78,7 +76,7 @@ btnHold.addEventListener('click', function () {
 btnRestart.addEventListener('click', start);
 
 const modal = document.querySelector('.modal');
-const btnCloseModal = document.querySelector('.btn.close-modal');
+const btnCloseModal = document.querySelector('.close-modal');
 const btnHelp = document.querySelector(".help")
 function showModal() {
     modal.classList.remove("hidden");
