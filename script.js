@@ -65,7 +65,7 @@ btnHold.addEventListener('click', function () {
     scoresArr[activePlayer] += currentScore;
     scores[activePlayer].textContent = scoresArr[activePlayer];
 
-    if (scoresArr[activePlayer] >= 100) {
+    if (scoresArr[activePlayer] >= 50) {
         playing = false;
         playerPanels[activePlayer].classList.add('winner');
         diceImg.style.visibility = 'hidden';
