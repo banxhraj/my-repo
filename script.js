@@ -27,10 +27,14 @@ function start() {
     playerPanels[1].classList.remove('active');
     playerPanels[0].classList.remove('winner');
     playerPanels[1].classList.remove('winner');
+
+
+    playerPanels[0].querySelector('h2').textContent = 'PLAYER 1';
+    playerPanels[1].querySelector('h2').textContent = 'PLAYER 2';
 }
 start();
 
-// for Switching player
+
 function switchPlayer() {
     currentScores[activePlayer].textContent = 0;
     currentScore = 0;
@@ -66,7 +70,7 @@ btnHold.addEventListener('click', function () {
         playing = false;
         playerPanels[activePlayer].classList.add('winner');
         diceImg.style.visibility = 'hidden';
-        playerPanels[activePlayer].querySelector('h2').textContent = 'WINNER!'; // Update text
+        playerPanels[activePlayer].querySelector('h2').textContent = 'WINNER!'; 
     } else {
         switchPlayer();
     }
