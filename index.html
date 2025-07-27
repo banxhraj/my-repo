@@ -16,15 +16,6 @@
 <body>
 
 
-    <div class="form">
-        <form action="">
-            <label for="player1">Player 1 Name:</label>
-            <input type="text" id="player1" name="player1" placeholder="Enter Player 1 Name" required>
-            <label for="player2">Player 2 Name:</label>
-            <input type="text" id="player2" name="player2" placeholder="Enter Player 2 Name" required>
-            <button type="submit" class="btn start-game">Start Game</button>
-        </form>
-    </div>
 
     <div class="headingbar">
         <h1>Dice Wars</h1>
@@ -32,7 +23,7 @@
         <img src="question.png" class="help" alt="help">
     </div>
 
-    <div class="modal hidden">
+    <!-- <div class="modal hidden">
         <div class="modal-content">
             <h2>How to Play</h2>
             <p>Roll the dice and accumulate points. The first player to reach 100 points wins!</p>
@@ -42,7 +33,22 @@
             <p>Good luck!</p>
             <button class="btn close-modal">Close</button>
         </div>
+    </div> -->
+    <div class="modal hidden">
+        <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>About Game & Rules</h3>
+      <p>
+        In this game, two players take turns to roll a dice. The player who rolls the highest number wins the round and scores points. The first player to reach 100 points wins the game!<br>
+        <strong>Rules:</strong><br>
+        1. Roll the dice by clicking the "ROLL DICE" button.<br>
+        2. Hold your score by clicking the "HOLD" button.<br>
+        3. Restart the game anytime by clicking the "RESTART" button.<br>
+        Good luck and have fun!
+      </p>
+      </div>
     </div>
+    <div class="overlay hidden"></div>
     <div class="container">
         <div class="pannel player-1">
             <h2>PLAYER 1</h2>

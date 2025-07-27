@@ -1,4 +1,4 @@
-// Dice Wars Game Logic
+
 
 const playerPanels = document.querySelectorAll('.pannel');
 const scores = document.querySelectorAll('.score');
@@ -8,10 +8,11 @@ const btnRoll = document.querySelector('.btn.roll');
 const btnHold = document.querySelector('.btn.hold');
 const btnRestart = document.querySelector('.btn.restart');
 
+
 let scoresArr, currentScore, activePlayer, playing;
 
-// Initialize game
-function init() {
+
+function start() {
     scoresArr = [0, 0];
     currentScore = 0;
     activePlayer = 0;
@@ -22,15 +23,16 @@ function init() {
     currentScores[0].textContent = 0;
     currentScores[1].textContent = 0;
 
-    diceImg.style.visibility = 'hidden';
+    diceImg.src = 'dice-6.png'; 
+    diceImg.style.visibility = 'visible';
     playerPanels[0].classList.add('active');
     playerPanels[1].classList.remove('active');
     playerPanels[0].classList.remove('winner');
     playerPanels[1].classList.remove('winner');
 }
-init();
+start();
 
-// Switch player
+// for Switching player
 function switchPlayer() {
     currentScores[activePlayer].textContent = 0;
     currentScore = 0;
@@ -44,7 +46,7 @@ btnRoll.addEventListener('click', function () {
     if (!playing) return;
 
     const dice = Math.floor(Math.random() * 6) + 1;
-    diceImg.src = `dice-${dice}.png`; // Make sure you have dice-1.png to dice-6.png images
+    diceImg.src = `dice-${dice}.png`; 
     diceImg.style.visibility = 'visible';
 
     if (dice !== 1) {
@@ -65,11 +67,27 @@ btnHold.addEventListener('click', function () {
     if (scoresArr[activePlayer] >= 100) {
         playing = false;
         playerPanels[activePlayer].classList.add('winner');
-        diceImg.style.visibility = 'hidden';
+        diceImg.style.visibility = 'visible';
+        
     } else {
         switchPlayer();
     }
 });
 
 // Restart
-btnRestart.addEventListener('click', init);
+btnRestart.addEventListener('click', start);
+
+const modal = document.querySelector('.modal');
+const btnCloseModal = document.querySelector('.btn.close-modal');
+const btnHelp = document.querySelector(".help")
+function showModal() {
+    modal.classList.remove("hidden");
+    
+}
+
+function closeModal() {
+    modal.classList.add("hidden");
+}
+
+btnHelp.addEventListener("click", showModal);
+btnCloseModal.addEventListener("click", closeModal);
