@@ -11,13 +11,37 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
 </head>
-<!-- kanchan  -->
+
+
 <body>
+
+
+    <div class="form">
+        <form action="">
+            <label for="player1">Player 1 Name:</label>
+            <input type="text" id="player1" name="player1" placeholder="Enter Player 1 Name" required>
+            <label for="player2">Player 2 Name:</label>
+            <input type="text" id="player2" name="player2" placeholder="Enter Player 2 Name" required>
+            <button type="submit" class="btn start-game">Start Game</button>
+        </form>
+    </div>
 
     <div class="headingbar">
         <h1>Dice Wars</h1>
         <p>Roll the dice and score points!</p>
-        <img src="question.png" onclick="switchPlayer()" alt="help">
+        <img src="question.png" class="help" alt="help">
+    </div>
+
+    <div class="modal hidden">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <p>Roll the dice and accumulate points. The first player to reach 100 points wins!</p>
+            <p>Click on "Roll Dice" to roll the dice, and "Hold" to save your current score.</p>
+            <p>Be careful! Rolling a 1 will reset your current score for that turn.</p>
+            <p>Click "Restart" to start a new game.</p>
+            <p>Good luck!</p>
+            <button class="btn close-modal">Close</button>
+        </div>
     </div>
     <div class="container">
         <div class="pannel player-1">
