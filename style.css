@@ -80,7 +80,7 @@ h3 {
   color: #8fbc8f;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
-  z-index: 10;
+  z-index: 1500;
 }
 
 .overlay {
