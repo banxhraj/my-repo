@@ -125,7 +125,8 @@ h3 {
 }
 .modal-content button {
  
-  color: white;
+  color: #f8e40c;
+  background-color:rgba(255, 255, 255, 0.2);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -195,14 +196,14 @@ h3 {
 }
 
 .dice {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 15px;
   transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
 }
 
 .dice.rolling {
-  animation: roll 0.5s ease-in-out;
+  animation: roll 0.6s ease-in-out;
 }
 
 @keyframes roll {
@@ -219,8 +220,22 @@ h3 {
   color: white;
   font-family: "Protest Revolution", sans-serif;
   border: none;
-  margin: 5px 0;
+  margin: 5px 0px;
   padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.roll{
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-family: "Protest Revolution", sans-serif;
+  border: none;
+  margin: 5px 0px;
+  padding: 8px 12px;
+  height: 90px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
