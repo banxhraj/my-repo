@@ -8,17 +8,46 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- heelo -->
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
 </head>
 <!-- mohit -->
 <body>
 
+
+
     <div class="headingbar">
         <h1>Dice Wars</h1>
         <p>Roll the dice and score points!</p>
-        <img src="question.png" onclick="switchPlayer()" alt="help">
+        <img src="question.png" class="help" alt="help">
     </div>
+
+    <!-- <div class="modal hidden">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <p>Roll the dice and accumulate points. The first player to reach 100 points wins!</p>
+            <p>Click on "Roll Dice" to roll the dice, and "Hold" to save your current score.</p>
+            <p>Be careful! Rolling a 1 will reset your current score for that turn.</p>
+            <p>Click "Restart" to start a new game.</p>
+            <p>Good luck!</p>
+            <button class="btn close-modal">Close</button>
+        </div>
+    </div> -->
+    <div class="modal hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3>About Game & Rules</h3>
+            <p>
+                In this game, two players take turns to roll a dice. The player who rolls the highest number wins the
+                round and scores points. The first player to reach 50 points wins the game!<br>
+                <strong>Rules:</strong><br>
+                1. Roll the dice by clicking the "ROLL DICE" button.<br>
+                2. Hold your score by clicking the "PASS" button.<br>
+                3. Restart the game anytime by clicking the "RESTART" button.<br>
+                Good luck and have fun!
+            </p>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
     <div class="container">
         <div class="pannel player-1">
             <h2>PLAYER 1</h2>
@@ -29,10 +58,10 @@
             </div>
         </div>
         <div class="controls">
-            <img src="dice-6.png" class="dice" />
+
             <button class="btn restart">RESTART</button>
-            <button class="btn roll">ROLL DICE</button>
-            <button class="btn hold">HOLD</button>
+            <button class="btn roll"><img src="dice-6.png" class="dice" /></button>
+            <button class="btn hold">PASS</button>
         </div>
         <div class="pannel player-2">
             <h2>PLAYER 2</h2>
