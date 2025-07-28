@@ -9,14 +9,14 @@
 
 body {
   background-image: url("samurai.png");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   padding-top: 60px;
 }
 
@@ -28,46 +28,50 @@ body {
   padding: 10px;
   text-align: center;
   color: white;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.19);
-  border-radius: 0 0 10px 10px; 
+  border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+
 }
 
 
-.headingbar > h1 {
+.headingbar>h1 {
   font-family: "Protest Revolution", sans-serif;
   font-size: 3rem;
   margin: 0;
 }
 
-.headingbar > p {
+.headingbar>p {
   font-family: "Protest Revolution", sans-serif;
-  font-size: 1rem; 
+  font-size: 1rem;
   margin-top: 5px;
 }
-.headingbar > img {
-  width: 40px; 
-  height: 40px; 
+
+.headingbar>img {
+  width: 40px;
+  height: 40px;
   padding: 9px;
+
 }
 
 h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 4rem;
-  margin: 1rem 0 0 0; 
+  margin: 1rem 0 0 0;
 }
 
 
 
 .hidden {
   display: none;
-  
+
 }
 
 .modal {
+
   position: absolute;
   font-size: 1.6rem;
   top: 50%;
@@ -81,6 +85,7 @@ h3 {
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
   z-index: 1500;
+  font-family: "Protest Revolution", sans-serif;
 }
 
 .overlay {
@@ -90,7 +95,7 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: 5;
- 
+
 }
 
 /* .hidden {
@@ -106,26 +111,34 @@ h3 {
   z-index: 1001; 
   display: none; 
 }
-*//*
+*/
 .modal-content {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  /* padding: 20px; */
+
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
-} 
-*/
-.modal-content h2 {
-  margin-bottom: 15px;
-  margin: 10px;
+  /* text-align: center; */
 }
+
+.modal-content h3 {
+  font-family: "Protest Revolution", sans-serif;
+  text-align: center;
+  color: #44e444;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
 .modal-content p {
+  color: #8fbc8f;
   margin-bottom: 20px;
   margin: 10px;
 }
+
 .modal-content button {
-  padding: 2px 2px; 
+  padding: 2px 2px;
   font-size: 2rem;
+  margin-top: 2px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -133,11 +146,15 @@ h3 {
   background: none;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Protest Revolution", sans-serif;
 }
 
 .modal-content button:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Protest Revolution", sans-serif;
   background-color: rgba(0, 0, 0, 0.147);
-  color:#8fbc8f
+  color: #8fbc8f
 }
 
 
@@ -150,17 +167,23 @@ h3 {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  width: 90%; /* Reduced width */
-  max-width: 1200px; /* Added max-width */
-  margin-top: 70px; /* Reduced margin-top */
+  width: 90%;
+  /* Reduced width */
+  max-width: 1200px;
+  /* Added max-width */
+  margin-top: 70px;
+  /* Reduced margin-top */
+
 }
 
 .pannel {
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-  width: 30%; /* Adjusted width */
-  min-width: 200px; /* Added min-width */
+  width: 30%;
+  /* Adjusted width */
+  min-width: 200px;
+  /* Added min-width */
   margin: 0 5px;
 }
 
@@ -200,8 +223,9 @@ h3 {
 .dice {
   width: 60px;
   height: 60px;
-  margin-bottom: 8px;
-  transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
+  /* margin: 0px; */
+  transition: transform 0.5s ease-in-out;
+  /* Add transition for smooth animation */
 }
 
 .dice.rolling {
@@ -212,6 +236,7 @@ h3 {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(720deg);
   }
@@ -222,8 +247,8 @@ h3 {
   color: white;
   font-family: "Protest Revolution", sans-serif;
   border: none;
-  margin: 5px 0;
-  padding: 8px 12px;
+  margin: 10px 0;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
@@ -244,17 +269,21 @@ h3 {
 
 /* Media Queries for Modal */
 @media (max-width: 768px) {
-    .modal {
-        width: 90%; /* Adjust width for smaller screens */
-        font-size: 1.4rem; /* Decrease font size */
-    }
+  .modal {
+    width: 90%;
+    /* Adjust width for smaller screens */
+    font-size: 1.4rem;
+    /* Decrease font size */
+  }
 }
 
 @media (max-width: 480px) {
-    .modal {
-        width: 95%; /* Further adjust width for very small screens */
-        font-size: 1.2rem; /* Even smaller font size */
-    }
+  .modal {
+    width: 95%;
+    /* Further adjust width for very small screens */
+    font-size: 1.2rem;
+    /* Even smaller font size */
+  }
 }
 
 @media (max-width: 768px) {
