@@ -46,16 +46,23 @@ function switchPlayer() {
 btnRoll.addEventListener('click', function () {
     if (!playing) return;
 
-    const dice = Math.floor(Math.random() * 6) + 1;
-    diceImg.src = `dice-${dice}.png`; 
-    diceImg.style.visibility = 'visible';
+    // Add rolling animation class
+    diceImg.classList.add('rolling');
 
-    if (dice !== 1) {
-        currentScore += dice;
-        currentScores[activePlayer].textContent = currentScore;
-    } else {
-        switchPlayer();
-    }
+    const dice = Math.floor(Math.random() * 6) + 1;
+    diceImg.src = `dice-${dice}.png`;
+
+    // Remove rolling animation class after a delay
+    setTimeout(() => {
+        diceImg.classList.remove('rolling');
+        diceImg.style.visibility = 'visible';
+        if (dice !== 1) {
+            currentScore += dice;
+            currentScores[activePlayer].textContent = currentScore;
+        } else {
+            switchPlayer();
+        }
+    }, 500); // Adjust the delay to match the animation duration
 });
 
 // Hold

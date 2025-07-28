@@ -198,6 +198,20 @@ h3 {
   width: 60px;
   height: 60px;
   margin-bottom: 15px;
+  transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+.dice.rolling {
+  animation: roll 0.5s ease-in-out;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
 }
 
 .btn {
