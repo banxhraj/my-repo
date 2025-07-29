@@ -118,7 +118,6 @@ h3 {
 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
   text-align: center;
 } */
 
@@ -127,9 +126,9 @@ h3 {
   margin: 10px;
   font-family: "Protest Revolution", sans-serif;
   
-=======
+
   /* text-align: center; */
->>>>>>> 9f3467df4b0ed91a15878ca11a9ccd81b70e0d92
+
 }
 
 .modal-content h3 {
@@ -148,11 +147,6 @@ h3 {
 }
 
 .modal-content button {
-<<<<<<< HEAD
- 
-  color: #f8e40c;
-  background-color:rgba(255, 255, 255, 0.2);
-=======
   padding: 2px 2px;
   font-size: 2rem;
   margin-top: 2px;
@@ -161,7 +155,6 @@ h3 {
   border-radius: 50%;
   color: none;
   background: none;
->>>>>>> 9f3467df4b0ed91a15878ca11a9ccd81b70e0d92
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
