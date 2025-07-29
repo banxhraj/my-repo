@@ -115,13 +115,16 @@ h3 {
   text-align: center;
 } */
 
-.modal-content h2 {
+.modal-content h3 {
   margin-bottom: 15px;
   margin: 10px;
+  font-family: "Protest Revolution", sans-serif;
+  
 }
 .modal-content p {
   margin-bottom: 20px;
   margin: 10px;
+  font-family: "Protest Revolution", sans-serif;
 }
 .modal-content button {
  
@@ -157,8 +160,8 @@ h3 {
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-  width: 30%; /* Adjusted width */
-  min-width: 200px; /* Added min-width */
+  width: 30%; 
+  min-width: 200px; 
   margin: 0 5px;
 }
 
