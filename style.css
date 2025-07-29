@@ -191,15 +191,10 @@ h3 {
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-<<<<<<< HEAD
-  width: 30%; 
-  min-width: 200px; 
-=======
   width: 30%;
   /* Adjusted width */
   min-width: 200px;
   /* Added min-width */
->>>>>>> 9f3467df4b0ed91a15878ca11a9ccd81b70e0d92
   margin: 0 5px;
 }
 
@@ -237,18 +232,10 @@ h3 {
 }
 
 .dice {
-<<<<<<< HEAD
   width: 70px;
   height: 70px;
   margin-bottom: 15px;
   transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
-=======
-  width: 60px;
-  height: 60px;
-  /* margin: 0px; */
-  transition: transform 0.5s ease-in-out;
-  /* Add transition for smooth animation */
->>>>>>> 9f3467df4b0ed91a15878ca11a9ccd81b70e0d92
 }
 
 .dice.rolling {
@@ -270,13 +257,8 @@ h3 {
   color: white;
   font-family: "Protest Revolution", sans-serif;
   border: none;
-<<<<<<< HEAD
   margin: 5px 0px;
   padding: 8px 12px;
-=======
-  margin: 10px 0;
-  padding: 10px 15px;
->>>>>>> 9f3467df4b0ed91a15878ca11a9ccd81b70e0d92
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
